@@ -1,0 +1,431 @@
+{
+    "WORKORDER": {
+        "rowstamp": "5130688",
+        "Attributes": {
+            "WONUM": {
+                "content": "T1060"
+            },
+            "PARENT": {
+                "content": "R1001"
+            },
+            "STATUS": {
+                "content": "WAPPR"
+            },
+            "STATUSDATE": {
+                "content": "2021-05-18T00:31:23+02:00"
+            },
+            "DESCRIPTION": {
+                "content": "Tarea 1"
+            },
+            "CHANGEBY": {
+                "content": "MAXADMIN"
+            },
+            "CHANGEDATE": {
+                "content": "2021-05-18T00:31:55+02:00"
+            },
+            "ESTDUR": {
+                "content": 1.0
+            },
+            "ESTLABHRS": {
+                "content": 0.0
+            },
+            "ESTMATCOST": {
+                "content": 0.0
+            },
+            "ESTLABCOST": {
+                "content": 0.0
+            },
+            "ESTTOOLCOST": {
+                "content": 0.0
+            },
+            "ACTLABHRS": {
+                "content": 0.0
+            },
+            "ACTMATCOST": {
+                "content": 0.0
+            },
+            "ACTLABCOST": {
+                "content": 0.0
+            },
+            "ACTTOOLCOST": {
+                "content": 0.0
+            },
+            "HASCHILDREN": {
+                "content": false
+            },
+            "OUTLABCOST": {
+                "content": 0.0
+            },
+            "OUTMATCOST": {
+                "content": 0.0
+            },
+            "OUTTOOLCOST": {
+                "content": 0.0
+            },
+            "HISTORYFLAG": {
+                "content": false
+            },
+            "REPORTEDBY": {
+                "content": "MAXADMIN"
+            },
+            "REPORTDATE": {
+                "content": "2021-05-18T00:31:23+02:00"
+            },
+            "DOWNTIME": {
+                "content": false
+            },
+            "CHARGESTORE": {
+                "content": false
+            },
+            "ESTSERVCOST": {
+                "content": 0.0
+            },
+            "ACTSERVCOST": {
+                "content": 0.0
+            },
+            "DISABLED": {
+                "content": false
+            },
+            "ESTATAPPRLABHRS": {
+                "content": 0.0
+            },
+            "ESTATAPPRLABCOST": {
+                "content": 0.0
+            },
+            "ESTATAPPRMATCOST": {
+                "content": 0.0
+            },
+            "ESTATAPPRTOOLCOST": {
+                "content": 0.0
+            },
+            "ESTATAPPRSERVCOST": {
+                "content": 0.0
+            },
+            "HASFOLLOWUPWORK": {
+                "content": false
+            },
+            "ORGID": {
+                "content": "PMSCIBM"
+            },
+            "SITEID": {
+                "content": "PMSCRTP"
+            },
+            "ISTASK": {
+                "content": false
+            },
+            "DISPLAYWONUM": {
+                "content": "T1060"
+            },
+            "LOCWARRANTYNOTICE": {
+                "content": false
+            },
+            "ASSETWARRANTYNOTICE": {
+                "content": false
+            },
+            "ACTTOTALCOST": {
+                "content": 0.0
+            },
+            "ESTATAPPRTOTALCOST": {
+                "content": 0.0
+            },
+            "ESTTOTALCOST": {
+                "content": 0.0
+            },
+            "WOCLASS": {
+                "content": "ACTIVITY"
+            },
+            "DUPFLAG": {
+                "content": "DUPWOTASKS"
+            },
+            "WOACCEPTSCHARGES": {
+                "content": true
+            },
+            "PARENTCHGSSTATUS": {
+                "content": false
+            },
+            "WORKORDERID": {
+                "content": 133347,
+                "resourceid": true
+            },
+            "OBJECTNAME": {
+                "content": "WORKORDER"
+            },
+            "HASPARENT": {
+                "content": true
+            },
+            "JPASSETS": {
+                "content": true
+            },
+            "SPASSETS": {
+                "content": false
+            },
+            "SPLOCATIONS": {
+                "content": false
+            },
+            "LANGCODE": {
+                "content": "EN"
+            },
+            "WARRANTYEXIST": {
+                "content": false
+            },
+            "INTERRUPTIBLE": {
+                "content": false
+            },
+            "WOGROUP": {
+                "content": "T1060"
+            },
+            "SAFETYPLAN_LOOKUP_LIST_TYPE": {
+                "content": "SHOWALLSAFETYPLANS"
+            },
+            "SLAAPPLIED": {
+                "content": false
+            },
+            "REPORTEDBYID": {
+                "content": "MAXADMIN"
+            },
+            "REPORTEDBYNAME": {
+                "content": "MAXADMIN"
+            },
+            "HASLD": {
+                "content": false
+            },
+            "ASSETFILTERBY": {
+                "content": "ALL"
+            },
+            "STATUSIFACE": {
+                "content": false
+            },
+            "JPCLASS": {
+                "content": "ACTIVITY"
+            },
+            "JPINCLUDECLASSLESS": {
+                "content": true
+            },
+            "WOISSWAP": {
+                "content": false
+            },
+            "NEWCHILDCLASS": {
+                "content": "ACTIVITY"
+            },
+            "SUSPENDFLOW": {
+                "content": false
+            },
+            "FLOWCONTROLLED": {
+                "content": true
+            },
+            "FLOWACTIONASSIST": {
+                "content": false
+            },
+            "CHANGEBYPARENT": {
+                "content": false
+            },
+            "HASLINEAR": {
+                "content": false
+            },
+            "IGNORESRMAVAIL": {
+                "content": true
+            },
+            "IGNOREDIAVAIL": {
+                "content": false
+            },
+            "ESTINTLABCOST": {
+                "content": 0.0
+            },
+            "ESTINTLABHRS": {
+                "content": 0.0
+            },
+            "ESTOUTLABHRS": {
+                "content": 0.0
+            },
+            "ESTOUTLABCOST": {
+                "content": 0.0
+            },
+            "ACTINTLABCOST": {
+                "content": 0.0
+            },
+            "ACTINTLABHRS": {
+                "content": 0.0
+            },
+            "ACTOUTLABHRS": {
+                "content": 0.0
+            },
+            "ACTOUTLABCOST": {
+                "content": 0.0
+            },
+            "ESTATAPPRINTLABCOST": {
+                "content": 0.0
+            },
+            "ESTATAPPRINTLABHRS": {
+                "content": 0.0
+            },
+            "ESTATAPPROUTLABHRS": {
+                "content": 0.0
+            },
+            "ESTATAPPROUTLABCOST": {
+                "content": 0.0
+            },
+            "PLUSCISMOBILE": {
+                "content": false
+            },
+            "PLUSCLOOP": {
+                "content": false
+            },
+            "USEMBODATA": {
+                "content": true
+            },
+            "INCTASKSINSCHED": {
+                "content": true
+            },
+            "NESTEDJPINPROCESS": {
+                "content": false
+            },
+            "REQASSTDWNTIME": {
+                "content": false
+            },
+            "APPTREQUIRED": {
+                "content": false
+            },
+            "AOS": {
+                "content": false
+            },
+            "AMS": {
+                "content": false
+            },
+            "LOS": {
+                "content": false
+            },
+            "LMS": {
+                "content": false
+            },
+            "REPAIRLOCFLAG": {
+                "content": false
+            },
+            "WORKLOG": {
+                "content": false
+            },
+            "FILTERBYWORKZONE": {
+                "content": true
+            },
+            "PLUSPTOTALBILLPR": {
+                "content": 0.0
+            },
+            "PLUSPGRTOTALBILLPR": {
+                "content": 0.0
+            },
+            "PLUSPPOREQ": {
+                "content": false
+            },
+            "PLUSPALLOWQUOTE": {
+                "content": false
+            },
+            "PLUSPBILLAPPROVED": {
+                "content": false
+            },
+            "PLUSPUNBILLEDTRANS": {
+                "content": false
+            },
+            "PLUSPBILLSTATE": {
+                "content": "NONE"
+            },
+            "PLUSPTOTALBILLED": {
+                "content": 0.0
+            },
+            "PLUSPTOTALPENDING": {
+                "content": 0.0
+            },
+            "PLUSPTOTALOUTSTANDING": {
+                "content": 0.0
+            },
+            "PLUSPAPPLYPSTOCHILD": {
+                "content": true
+            },
+            "PLUSPTOTALBILLPRICE": {
+                "content": 0.0
+            },
+            "PLUSPEXCEEDEST": {
+                "content": 0.0
+            },
+            "PLUSPPERCENTCOMP": {
+                "content": 0.0
+            },
+            "PLUSPAGMTALLSPLIT": {
+                "content": false
+            },
+            "PLUSPTOTALESTPRICE": {
+                "content": 0.0
+            },
+            "PMCHGISIMPTASK": {
+                "content": true
+            },
+            "PMCHGIATECHSUMCOST": {
+                "content": 0.0
+            },
+            "PMCHGIATECHSUMEFF": {
+                "content": 0.0
+            },
+            "PMCHGIABUSSUMCOST": {
+                "content": 0.0
+            },
+            "PMCHGIABUSSUMEFF": {
+                "content": 0.0
+            },
+            "PMCHGIADEFREL": {
+                "content": false
+            },
+            "PMCHGIATOTALCOST": {
+                "content": 0.0
+            },
+            "PMCHGIATOTALEFF": {
+                "content": 0.0
+            },
+            "PMCHGTYPE": {
+                "content": "Normal"
+            },
+            "PMCHGPROBABILITYFAILURE": {
+                "content": 2
+            },
+            "PMCHGFULLYAUTOMATED": {
+                "content": false
+            },
+            "PMCHGOWNERLOGINUSR": {
+                "content": true
+            },
+            "PMCHGSTDTWF": {
+                "content": true
+            },
+            "PMRELBACKOUTEXETED": {
+                "content": false
+            },
+            "ACTLICCOST": {
+                "content": 0.0
+            },
+            "ESTATAPPRLICCOST": {
+                "content": 0.0
+            },
+            "ESTLICCOST": {
+                "content": 0.0
+            },
+            "VALIDATIONERROR": {
+                "content": false
+            },
+            "VALIDATIONWARN": {
+                "content": false
+            },
+            "MILESTONE": {
+                "content": false
+            },
+            "PLUSPALLOWQUOTELABOR": {
+                "content": false
+            },
+            "PLUSPALLOWQUOTEMATERIAL": {
+                "content": false
+            },
+            "PLUSPALLOWQUOTESERVICE": {
+                "content": false
+            },
+            "DJPAPPLIED": {
+                "content": "NO"
+            }
+        }
+    }
+}

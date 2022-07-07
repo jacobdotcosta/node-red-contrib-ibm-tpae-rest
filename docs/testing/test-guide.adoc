@@ -1,0 +1,28 @@
+= Test Guide
+:toc: left
+
+== Testing
+
+https://github.com/node-red/node-red-node-test-helper
+
+
+```bash
+$ npm install node-red-node-test-helper node-red --save-dev
+$ npm install jest --save-dev
+```
+
+== Execute tests
+
+Unit tests.
+
+[source,bash]
+----
+$ npm run-script test
+----
+
+Integration tests.
+
+[source,bash]
+----
+$ npm run-script test-it
+----

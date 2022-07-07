@@ -1,25 +1,39 @@
 {
-  "name": "node-red-contrib-ibm-tpae-rest",
-  "version": "0.0.1",
-  "description": "A Node-RED node to interact with IBM TPAE (IBM Maximo and IBM Control Desk) REST API.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trikorasolns/node-red-contrib-ibm-tpae-rest.git"
-  },
-  "keywords": [
-    "ibm-tpae",
-    "ibm-maximo",
-    "ibm-control-desk",
-    "rest"
-  ],
-  "author": "Trikora Solutions SL",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/trikorasolns/node-red-contrib-ibm-tpae-rest/issues"
-  },
-  "homepage": "https://github.com/trikorasolns/node-red-contrib-ibm-tpae-rest#readme"
+	"name": "node-red-contrib-ibm-tpae-rest",
+	"version": "0.0.1",
+	"description": "A Node-RED node to interact with IBM TPAE (IBM Maximo and IBM Control Desk) REST API.",
+	"main": "index.js",
+	"node-red": {
+		"nodes": {
+			"workorder": "workorder.js"
+		}
+	},
+	"scripts": {
+		"test": "jest --verbose ./test",
+		"test-it": "jest --verbose ./it",
+		"test-mocha": "mocha --recursive test",
+		"int-test": "mocha --require babel-core/register --recursive test",
+		"test-workorder": "node test/workorder_spec.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/trikorasolns/node-red-contrib-ibm-tpae-rest.git"
+	},
+	"keywords": [
+		"ibm-tpae",
+		"ibm-maximo",
+		"ibm-control-desk",
+		"rest"
+	],
+	"author": "Trikora Solutions SL",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/trikorasolns/node-red-contrib-ibm-tpae-rest/issues"
+	},
+	"homepage": "https://github.com/trikorasolns/node-red-contrib-ibm-tpae-rest#readme",
+	"devDependencies": {
+		"jest": "^28.1.2",
+		"node-red": "^2.2.2",
+		"node-red-node-test-helper": "^0.3.0"
+	}
 }

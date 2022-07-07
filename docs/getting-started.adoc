@@ -1,0 +1,19 @@
+= Getting Started
+
+== Tests
+
+== Execute tests
+
+Unit tests.
+
+[source,bash]
+----
+$ npm run-script test
+----
+
+Integration tests.
+
+[source,bash]
+----
+$ npm run-script test-it
+----

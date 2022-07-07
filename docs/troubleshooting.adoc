@@ -1,0 +1,23 @@
+= Testing Troubleshooting
+:toc: left
+
+== Error: Cannot find module 'node-red-node-test-helper'
+
+Symptom
+
+Tests won't execute with this error
+
+Problem
+
+The `node-red-node-test-helper` module isn't installed.
+
+Cause
+
+Solution
+
+Install the `node-red-node-test-helper` module.
+
+[source,bash]
+----
+npm install node-red-node-test-helper node-red --save-dev
+----
