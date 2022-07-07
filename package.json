@@ -9,8 +9,8 @@
 		}
 	},
 	"scripts": {
-		"test": "jest --verbose ./test",
-		"test-it": "jest --verbose ./it",
+		"test": "jest --verbose ./test --coverage",
+		"test-it": "jest --verbose ./it --coverage",
 		"test-mocha": "mocha --recursive test",
 		"int-test": "mocha --require babel-core/register --recursive test",
 		"test-workorder": "node test/workorder_spec.js"
