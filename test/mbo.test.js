@@ -12,7 +12,7 @@ describe('mbo Module', function () {
 	it('mbo Module should be loaded', function (done) {
 		const nodeName = "MBO module Test Name";
 		var flow = [{ id: "n1", type: "mbo", mbo: "workorder", operation: "Get", name: `${nodeName}` }];
-		helper.load(workorderModule, flow, function () {
+		helper.load(workorderModule, flow, { username: "jane", password: "doe" }, function () {
 			try {
 				var n1 = helper.getNode("n1");
 				console.debug("n1: ", n1);
