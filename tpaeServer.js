@@ -1,15 +1,17 @@
 module.exports = function (RED) {
-	function MgRemoteServerNode(config) {
+	function TpaeServerNode(config) {
 		RED.nodes.createNode(this, config);
-		console.log("Config: ", config);
-		console.log("this.credentials: ", this.credentials);
+		console.log("TpaeServerNode config: ", config);
+		console.log("TpaeServerNode credentials: ", this.credentials);
 		this.host = config.host;
 		this.port = config.port;
 		this.name = config.name;
+		this.username = this.credentials.username;
 		this.password = this.credentials.password;
 	}
-	RED.nodes.registerType("mg-remote-server", MgRemoteServerNode, {
+	RED.nodes.registerType("tpae-server", TpaeServerNode, {
 		credentials: {
+			username: { type: "text" },
 			password: { type: "password" }
 		}
 	});

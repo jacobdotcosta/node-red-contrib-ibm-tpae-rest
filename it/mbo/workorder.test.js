@@ -25,14 +25,18 @@ describe('mbo Module', function () {
 
 	it('IT: BajarOTsSoloCabeceras Anonymous not allowed', function (done) {
 		try {
-			var flow = [{ id: `${nodePrefix}-1`, type: "mbo", operation: "BajarOTsSoloCabeceras", name: "bajar-ots-solo-cabeceras: IT BajarOTsSoloCabeceras", server: "movilGmaoServer", wires: [[`${nodePrefix}-2`]] },
-			{ id: `${nodePrefix}-2`, type: "helper" }, { id: "movilGmaoServer", type: "mg-remote-server", host: "www.movilgmao.es", port: 443, name: "MovilGmao Host" }];
-			helper.load([otModule, mgConfigModule], flow, { password: "xxx" }, function () {
+			var flow = [{ id: `${nodePrefix}-1`, type: "mbo", mbo: "workorder", operation: "Get", name: "IT workorder get", server: "tpaeServer", wires: [[`${nodePrefix}-2`]] },
+			{ id: `${nodePrefix}-2`, type: "helper" }, { id: "tpaeServer", type: "tpae-server", host: "icd761.trikorasolutions.net", port: 9080, name: "TPAE Host" }];
+			helper.load([otModule, mgConfigModule], flow, { username: "jane", password: "doe" }, function () {
 				// console.debug("load: ");
+				var tpaeServer = helper.getNode(`tpaeServer`);
+				tpaeServer.credentials = {
+                    userid: "maxadmin",
+                    password: "maxadmin",
+                };
 				var n2 = helper.getNode(`${nodePrefix}-2`);
 				// console.debug("n2: ", n2);
 				var n1 = helper.getNode(`${nodePrefix}-1`);
-				// console.debug("n1: ", n1);
 				n2.on("input", function (msg) {
 					try {
 						// console.debug("msg: ", msg);
@@ -60,8 +64,8 @@ describe('mbo Module', function () {
 	// 	const argv = yargs(hideBin(process.argv)).argv;
 	// 	console.debug("argv: ", argv);
 	// 	const idAuth = argv.idAuth;
-	// 	var flow = [{ id: `${nodePrefix}-1`, type: "mbo", operation: "BajarOTsSoloCabeceras", name: "bajar-ots-solo-cabeceras: IT BajarOTsSoloCabeceras", server: "movilGmaoServer", wires: [[`${nodePrefix}-2`]] },
-	// 	{ id: `${nodePrefix}-2`, type: "helper" }, { id: "movilGmaoServer", type: "mg-remote-server", host: "www.movilgmao.es", port: 443, name: "MovilGmao Host" }];
+	// 	var flow = [{ id: `${nodePrefix}-1`, type: "mbo", operation: "BajarOTsSoloCabeceras", name: "bajar-ots-solo-cabeceras: IT BajarOTsSoloCabeceras", server: "tpaeServer", wires: [[`${nodePrefix}-2`]] },
+	// 	{ id: `${nodePrefix}-2`, type: "helper" }, { id: "tpaeServer", type: "tpae-server", host: "www.movilgmao.es", port: 443, name: "MovilGmao Host" }];
 	// 	helper.load([otModule, mgConfigModule], flow, { password: `${idAuth}` }, function () {
 	// 		var n2 = helper.getNode(`${nodePrefix}-2`);
 	// 		var n1 = helper.getNode(`${nodePrefix}-1`);

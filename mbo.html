@@ -3,9 +3,9 @@
         category: 'tpae',
         color: '#00bfff',
         defaults: {
-            mbo: { value: "" },
-            operation: { value: "" },
-            server: { value: "", type: "tpae-server" },
+            mbo: { value: "", required: true },
+            operation: { value: "", required: true },
+            server: { value: "", type: "tpae-server", required: true },
             name: { value: "" }
         },
         credentials: {
