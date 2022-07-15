@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    RED.nodes.registerType('mbo', {
+        category: 'tpae',
+        color: '#00bfff',
+        defaults: {
+            mbo: { value: "" },
+            operation: { value: "" },
+            server: { value: "", type: "tpae-server" },
+            name: { value: "" }
+        },
+        credentials: {
+            username: { type: "text" },
+            password: { type: "password" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-cube",
+        label: function () {
+            return (this.name ? this.name : `${this.mbo}-${this.operation}`);
+        },
+        labelStyle: function () {
+            return (this.name) ? "node_label_italic" : "";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="mbo">
+    <div class="form-row">
+        <label for="node-input-mbo"><i class="fa fa-tag"></i> MBO</label>
+        <input type="text" id="node-input-mbo" placeholder="TPAE MBO Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-operation"><i class="fa fa-tag"></i> Operation</label>
+        <select id="node-input-operation">
+                <option value="Get">Get</option>
+                <option value="Search">Search</option>
+                <option value="Create">Create</option>
+                <option value="Update">Update</option>
+                <option value="Delete">Delete</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-tag"></i> TPAE Host</label>
+        <input type="text" id="node-input-server" placeholder="TPAE Host">
+    </div>
+    <div class="form-row">
+        <label for="node-input-username"><i class="fa fa-tag"></i> User</label>
+        <input type="text" id="node-input-username">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="fa fa-tag"></i> Passwrod</label>
+        <input type="password" id="node-input-password">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="mbo">
+
+</script>
