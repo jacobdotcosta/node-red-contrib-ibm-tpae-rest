@@ -24,6 +24,12 @@ describe('mbo Module', function () {
 	});
 
 	it('IT: BajarOTsSoloCabeceras Anonymous not allowed', function (done) {
+		console.debug("process.argv: ", process.argv);
+		const argv = yargs(hideBin(process.argv)).argv;
+		console.debug("argv: ", argv);
+		const idAuth = argv.idAuth;
+		const tpaeHost = argv.tpaeHost;
+		const tpaePort = argv.tpaePort;
 		try {
 			var flow = [{ id: `${nodePrefix}-1`, type: "mbo", mbo: "workorder", operation: "Get", name: "IT workorder get", server: "tpaeServer", wires: [[`${nodePrefix}-2`]] },
 			{ id: `${nodePrefix}-2`, type: "helper" }, { id: "tpaeServer", type: "tpae-server", host: "icd761.trikorasolutions.net", port: 9080, name: "TPAE Host" }];
