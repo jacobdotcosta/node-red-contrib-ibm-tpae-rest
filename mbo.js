@@ -1,3 +1,5 @@
+var mboGet = require('./tpae/mbo/get');
+
 module.exports = function (RED) {
 	"use strict";
 	const http = require('http');
@@ -53,6 +55,7 @@ module.exports = function (RED) {
 
 					}
 				}
+				mboGet.get(host, port, username, password, config.mbo,msg.payload.id);
 				const tpaePath = `/${tpaeMboPrefix}/${config.mbo}/1?_lid=${username}&_lpwd=${password}&_format=json`;
 				console.debug("tpaePath: ", tpaePath);
 				const options = {
