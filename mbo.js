@@ -1,4 +1,5 @@
 var mboGet = require('./tpae/mbo/get');
+var mboGetTs = require('./tpae/mbo/getTs');
 
 module.exports = function (RED) {
 	"use strict";
@@ -55,49 +56,63 @@ module.exports = function (RED) {
 
 					}
 				}
-				mboGet.get(host, port, username, password, config.mbo,msg.payload.id);
-				const tpaePath = `/${tpaeMboPrefix}/${config.mbo}/1?_lid=${username}&_lpwd=${password}&_format=json`;
-				console.debug("tpaePath: ", tpaePath);
-				const options = {
-					// hostname: `${RED.settings.ngiMgHost}`,
-					hostname: `${this.server.host}`,
-					// hostname: `${ngiMgHost}`,
-					port: `${this.server.port}`,
-					path: `${tpaePath}`,
-					method: 'GET',
-					headers: {
-						'Content-Type': 'application/json',
-						'Content-Length': (msg.payload && msg.payload.length) ? msg.payload.length : 0,
-					},
-				};
-				console.debug("options: ", options)
-				const req = http.request(options, response => {
-					// const req = http.post(tpaeUrl, (response) => {
-					console.debug(`Repsonse Status: ${response.statusCode}: ${response.statusMessage}`);
-					// console.debug("response: ", response);
-					let posts = "";
-					response.on("data", function (data) {
-						posts += data.toString();
-					});
-					response.on("end", function () {
-						console.debug("posts.length: ", posts.length);
-						console.debug("posts: ", posts.toString());
-						msg.payload = posts.toString();
-						msg.httpStatusCode = response.statusCode;
-						msg.httpStatusMessage = response.statusMessage;
-						send(msg);
-						done();
-					});
-				}, error => {
-					console.error("error: ", error);
-				});
-				req.on('error', error => {
-					console.error("error 2: ", error);
-				});
-				if (msg.payload) {
-					req.write(msg.payload);
+				const tpaeWo = "";
+				try {
+					// (async () => await mboGet.get(host, port, username, password, config.mbo, msg.payload.id))();
+					mboGetTs.get(this.server.host, this.server.port, username, password, config.mbo, msg.id) .then((tpaeWo) => {
+						console.debug("tpaeWo: ", tpaeWo);
+						send(tpaeWo);
+					}).then(console.log()).catch(console.error());
+					// const tpaeWo = await mboGet.get(host, port, username, password, config.mbo, msg.payload.id);
+					// console.debug("tpaeWo: ", tpaeWo);
+				} catch (err) {
+					console.error("err: ", err);
+					console.error("msg: ", msg);
+					done(err);
 				}
-				req.end();
+				// send(tpaeWo);
+				// const tpaePath = `/${tpaeMboPrefix}/${config.mbo}/1?_lid=${username}&_lpwd=${password}&_format=json`;
+				// console.debug("tpaePath: ", tpaePath);
+				// const options = {
+				// 	// hostname: `${RED.settings.ngiMgHost}`,
+				// 	hostname: `${this.server.host}`,
+				// 	// hostname: `${ngiMgHost}`,
+				// 	port: `${this.server.port}`,
+				// 	path: `${tpaePath}`,
+				// 	method: 'GET',
+				// 	headers: {
+				// 		'Content-Type': 'application/json',
+				// 		'Content-Length': (msg.payload && msg.payload.length) ? msg.payload.length : 0,
+				// 	},
+				// };
+				// console.debug("options: ", options)
+				// const req = http.request(options, response => {
+				// 	// const req = http.post(tpaeUrl, (response) => {
+				// 	console.debug(`Repsonse Status: ${response.statusCode}: ${response.statusMessage}`);
+				// 	// console.debug("response: ", response);
+				// 	let posts = "";
+				// 	response.on("data", function (data) {
+				// 		posts += data.toString();
+				// 	});
+				// 	response.on("end", function () {
+				// 		console.debug("posts.length: ", posts.length);
+				// 		console.debug("posts: ", posts.toString());
+				// 		msg.payload = posts.toString();
+				// 		msg.httpStatusCode = response.statusCode;
+				// 		msg.httpStatusMessage = response.statusMessage;
+				// 		send(msg);
+				// 		done();
+				// 	});
+				// }, error => {
+				// 	console.error("error: ", error);
+				// });
+				// req.on('error', error => {
+				// 	console.error("error 2: ", error);
+				// });
+				// if (msg.payload) {
+				// 	req.write(msg.payload);
+				// }
+				// req.end();
 			} catch (err) {
 				console.error("err: ", err);
 				console.error("msg: ", msg);

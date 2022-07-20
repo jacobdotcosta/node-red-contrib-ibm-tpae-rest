@@ -1,5 +1,7 @@
-var mboConstants = require('./constants');
 const http = require('http');
+const request = require('request');
+
+const mboConstants = require('./constants');
 
 // module.exports = Object.freeze({
 // module.exports.get =
@@ -17,7 +19,7 @@ module.exports = {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
-				'Content-Length': (msg.payload && msg.payload.length) ? msg.payload.length : 0,
+				// 'Content-Length': (msg.payload && msg.payload.length) ? msg.payload.length : 0,
 			},
 			timeout: 5000
 		};

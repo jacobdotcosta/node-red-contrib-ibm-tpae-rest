@@ -24,9 +24,9 @@ describe('mbo Module', function () {
 	});
 
 	it('IT :: MBO :: workorder Anonymous not allowed', function (done) {
-		console.debug("process.argv: ", process.argv);
+		// console.debug("process.argv: ", process.argv);
 		const argv = yargs(hideBin(process.argv)).argv;
-		console.debug("argv: ", argv);
+		// console.debug("argv: ", argv);
 		const tpaeHost = argv.tpaeHost;
 		const tpaePort = argv.tpaePort;
 		const username = argv.username;
@@ -44,6 +44,7 @@ describe('mbo Module', function () {
 				// console.debug("n2: ", n2);
 				var n1 = helper.getNode(`${nodePrefix}-1`);
 				n2.on("input", function (msg) {
+					console.debug("n2 input msg: ", msg);
 					try {
 						assert.equal(msg.httpStatusCode, 200);
 						assert.equal(msg.httpStatusMessage, "OK");
@@ -56,13 +57,13 @@ describe('mbo Module', function () {
 						done(err);
 					}
 				});
-				n1.receive({ username: `${username}`, password: `${password}` });
+				n1.receive({ id: 1, username: `${username}`, password: `${password}` });
 			});
 		} catch (err) {
 			console.error("err: ", err);
 			console.error("msg: ", msg);
 			done();
 		}
-	}, 5000);
+	}).timeout(10000);
 
 });

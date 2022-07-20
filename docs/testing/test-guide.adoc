@@ -24,5 +24,5 @@ Integration tests.
 
 [source,bash]
 ----
-$ npm run-script test-it
+$ npm run-script test-it -- --tpaeHost=icd761.trikorasolutions.net --tpaePort=9080
 ----
