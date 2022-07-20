@@ -59,11 +59,12 @@ module.exports = function (RED) {
 				const tpaeWo = "";
 				try {
 					// (async () => await mboGet.get(host, port, username, password, config.mbo, msg.payload.id))();
-					mboGetTs.get(this.server.host, this.server.port, username, password, config.mbo, msg.id) .then((tpaeWo) => {
+					
+					mboGetTs.get(this.server.host, this.server.port, username, password, config.mbo, msg.id) .then(tpaeWo => {
 						console.debug("tpaeWo: ", tpaeWo);
 						send(tpaeWo);
 					}).then(console.log()).catch(console.error());
-					// const tpaeWo = await mboGet.get(host, port, username, password, config.mbo, msg.payload.id);
+					// const tpaeWo = await mboGetTs.get(this.server.host, this.server.port, username, password, config.mbo, msg.id);
 					// console.debug("tpaeWo: ", tpaeWo);
 				} catch (err) {
 					console.error("err: ", err);

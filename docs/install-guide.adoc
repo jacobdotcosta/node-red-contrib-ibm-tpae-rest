@@ -8,4 +8,5 @@ https://github.com/node-red/node-red-node-test-helper
 
 ```bash
 $ npm install npm install string-to-json
+$ npm install request --save
 ```
